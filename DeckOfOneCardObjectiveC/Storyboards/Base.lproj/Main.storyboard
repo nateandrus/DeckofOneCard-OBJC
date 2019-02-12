@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Card View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="CardViewController" customModule="DeckOfOneCardObjectiveC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="lZX-R6-q4L">
+                                <rect key="frame" x="37.5" y="110" width="300" height="467"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0AW-JG-3oN">
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="20.5"/>
+                                        <color key="backgroundColor" red="0.24839342680000001" green="1" blue="0.79459434390000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="0.4168194784" blue="0.83956746859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GXo-KR-kju">
+                                        <rect key="frame" x="0.0" y="30.5" width="300" height="394.5"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fMX-0e-UIu">
+                                        <rect key="frame" x="0.0" y="435" width="300" height="32"/>
+                                        <color key="backgroundColor" red="1" green="0.4168194784" blue="0.83956746859999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
+                                        <state key="normal" title="DRAW A CARD">
+                                            <color key="titleColor" red="0.24839342680000001" green="1" blue="0.79459434390000006" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newCardButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NRe-jf-RGc"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="0AW-JG-3oN" firstAttribute="width" secondItem="lZX-R6-q4L" secondAttribute="width" id="Ns3-zi-7Vd"/>
+                                    <constraint firstItem="fMX-0e-UIu" firstAttribute="width" secondItem="lZX-R6-q4L" secondAttribute="width" id="SHJ-Ms-J8N"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lZX-R6-q4L" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="3v6-iy-ga0"/>
+                            <constraint firstItem="lZX-R6-q4L" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.8" id="6AQ-0J-rcG"/>
+                            <constraint firstItem="lZX-R6-q4L" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="b8v-Bq-w7u"/>
+                            <constraint firstItem="lZX-R6-q4L" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.7" id="i1j-wE-E1X"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardImageView" destination="GXo-KR-kju" id="6jy-NM-pFa"/>
+                        <outlet property="nameLabel" destination="0AW-JG-3oN" id="fO5-7Q-AiG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
